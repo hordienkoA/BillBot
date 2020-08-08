@@ -19,7 +19,7 @@ namespace BillBot.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLazyLoadingProxies().UseMySQL("server=localhost;database=root;password=Test123");//.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=botdb;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseLazyLoadingProxies().UseMySQL("server=localhost;database=botDb;user=;password=Test123");//.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=botdb;Trusted_Connection=True;MultipleActiveResultSets=true");
             base.OnConfiguring(optionsBuilder);
         }
 
