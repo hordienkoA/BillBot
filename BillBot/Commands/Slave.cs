@@ -32,7 +32,7 @@ namespace BillBot.Commands
             string nick = user.UserName == null
                     ? $"<a href=\"tg://user?id={user.UserId}\">{user.FirstName}</a>"
                     : $"@{user.UserName}";
-            if (newAchivement != null)
+            /*if (newAchivement != null)
             {
                 client.SendTextMessageAsync(chatId,
                         String.Format(
@@ -40,11 +40,11 @@ namespace BillBot.Commands
                 return client.SendPhotoAsync(chatId, photo: newAchivement.PathToImage,
                     caption: $"<b>Вы заработали новую ачивку:</b>\n {nick}", ParseMode.Html);
             }
-            else{
+            else{*/
                 return client.SendTextMessageAsync(chatId,
-                        String.Format(
-                            db.Phrases.ToList().ElementAt(rnd.Next(0, db.Phrases.Count())).Text, nick), ParseMode.Html);
-            }
+                        /*String.Format(*/
+                            /*db.Phrases.ToList().ElementAt(rnd.Next(0, db.Phrases.Count())).Text,*/ nick, ParseMode.Html);
+            /*}*/
         }
 
         public override bool Contains(Message message)

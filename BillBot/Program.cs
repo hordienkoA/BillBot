@@ -214,7 +214,7 @@ namespace BillBot
                             string nick = user.UserName == null
                     ? $"<a href=\"tg://user?id={user.UserId}\">{user.FirstName}</a>"
                     : $"@{user.UserName}";
-                            await client.SendTextMessageAsync(message.Chat.Id, nick);
+                            await client.SendTextMessageAsync(message.Chat.Id, nick,ParseMode.Html);
                         }
 
                     }
@@ -230,7 +230,7 @@ namespace BillBot
                             await client.SendTextMessageAsync(message.Chat.Id, "недопустимый промежуток");
                         }
                     }
-                    if (substr.Contains("Место", StringComparison.OrdinalIgnoreCase))
+                    if (substr.Contains("где", StringComparison.OrdinalIgnoreCase))
                     {
                         Random rnd = new Random();
                         var latitude = (float)(rnd.NextDouble() * (90.0 - (-90.0)) + (-90.0));
@@ -247,11 +247,11 @@ namespace BillBot
                         await gs.Execute(message, client);
 
                     }
-                     if (message.Text.Contains("slave", StringComparison.OrdinalIgnoreCase))
+                     /*if (message.Text.Contains("кто", StringComparison.OrdinalIgnoreCase))
                     {
                         Slave slave = new Slave(new ApplicationContext());
                         await slave.Execute(message, client);
-                    }
+                    }*/
                      
                 }
                 
