@@ -40,7 +40,6 @@ C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.csprojAssemblyReference.cache
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.AssemblyInfoInputs.cache
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.AssemblyInfo.cs
-C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.csproj.CoreCompileInputs.cache
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.csproj.CopyComplete
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.dll
 C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.pdb
@@ -66,3 +65,15 @@ C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\
 C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\EPPlus.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\andre\RiderProjects\BillBot\BillBot\obj\Release\netcoreapp3.1\BillBot.csproj.CoreCompileInputs.cache

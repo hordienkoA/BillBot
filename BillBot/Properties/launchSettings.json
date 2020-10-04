@@ -2,6 +2,12 @@
   "profiles": {
     "BillBot": {
       "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    },
+    "Docker (1)": {
+      "commandName": "Docker"
     }
   }
 }

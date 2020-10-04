@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using BillBot.Commands;
 using BillBot.Database;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types.Enums;
-
+using Telegram.Bot.Types;
 namespace BillBot
 {
     class Program
     {
         private static TelegramBotClient client;
         private static List<Command> commandsList;
-
+        private const long birthChat= -485459738;
         public static void CheckAndAddUserToDb(Telegram.Bot.Types.User user)
         {
             try
@@ -166,6 +168,9 @@ namespace BillBot
             client=new TelegramBotClient(BotConfiguration.token);
             client.OnMessage += BotMessageReceived;
             client.StartReceiving();
+            var program = new Program();
+            Timer checkForTime = new Timer(program.CheckForBirthDay, (object)birthChat, 0, 24*60*60*1000);
+            Console.WriteLine("Bot is ready");
             while (true)
             {
                 
@@ -173,7 +178,32 @@ namespace BillBot
             client.StopReceiving();
             
         }
+        public async void CheckForBirthDay(object chatId)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            using (var package = new ExcelPackage(new FileInfo("dr.xlsx")))
+            {
+                var firstSheet = package.Workbook.Worksheets.FirstOrDefault();
+                int c = 3;
+                int r = 2;
+                while (firstSheet.Cells[r, 3].Value != null)
+                {
+                    r++;
+                }
+                int poiner = 3;
+                foreach (var elem in firstSheet.Cells[3, c, r, c])
+                {
+                    var d = DateTime.FromOADate((double)elem.Value);
 
+                    if (d.Month == DateTime.Now.Month && d.Day == DateTime.Now.Day)
+                    {
+                        await client.SendTextMessageAsync((long)chatId, $"{firstSheet.Cells[poiner, 1].Value}, https://youtu.be/HGE79KpCzHA");
+                    }
+                    poiner++;
+
+                }
+            }
+        }
         public static async void BotMessageReceived(object? sender, MessageEventArgs e)
         {
             var message = e.Message;
@@ -247,12 +277,16 @@ namespace BillBot
                         await gs.Execute(message, client);
 
                     }
-                     /*if (message.Text.Contains("кто", StringComparison.OrdinalIgnoreCase))
+
+                    /*if (message.Text.Contains("кто", StringComparison.OrdinalIgnoreCase))
+                   {
+                       Slave slave = new Slave(new ApplicationContext());
+                       await slave.Execute(message, client);
+                   }*/
+                    if (substr.Contains("тест1", StringComparison.OrdinalIgnoreCase))
                     {
-                        Slave slave = new Slave(new ApplicationContext());
-                        await slave.Execute(message, client);
-                    }*/
-                     
+                        
+                    }
                 }
                 
             }
