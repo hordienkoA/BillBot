@@ -18,7 +18,7 @@ namespace BillBot
     {
         private static TelegramBotClient client;
         private static List<Command> commandsList;
-        private const long birthChat= -485459738;
+        private const long birthChat = -1001451682383;
         public static void CheckAndAddUserToDb(Telegram.Bot.Types.User user)
         {
             try
